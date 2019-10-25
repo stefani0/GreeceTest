@@ -11,20 +11,25 @@ import {
   AppAsideModule,
   AppBreadcrumbModule,
 } from '@coreui/angular';
-import { Exam1Component } from './modules/exam1/components/exam1/exam1.component';
+import { FormlyModule } from '@ngx-formly/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './core/components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ToasterModule } from 'angular2-toaster';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
 ];
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
     APP_CONTAINERS,
-    Exam1Component,
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,12 @@ const APP_CONTAINERS = [
     AppHeaderModule,
     AppFooterModule,
     AppSidebarModule,
+    FormlyModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule, // required animations module
+   // ToastrModule.forRoot(), // ToastrModule added
+    ToasterModule,
 
 
   ],

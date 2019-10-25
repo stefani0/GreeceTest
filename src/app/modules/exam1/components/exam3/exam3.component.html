@@ -1,0 +1,33 @@
+<div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="base">
+              <div class="maindisplay">
+                <div class="subdisplay">{{ subText }}</div>
+                {{ mainText }}
+              </div>
+              <div class="keypad">
+                <div class="keys ackey one-line" (click)="allClear()">AC</div>
+                <div class="keys opkey one-line" (click)="pressKey('/')">/</div>
+                <div class="keys numkey one-line" (click)="pressKey('7')">7</div>  
+                <div class="keys numkey one-line" (click)="pressKey('8')">8</div>
+                <div class="keys numkey one-line" (click)="pressKey('9')">9</div>  
+                <div class="keys opkey one-line" (click)="pressKey('x')">x</div>
+                <div class="keys numkey one-line" (click)="pressKey('4')">4</div>  
+                <div class="keys numkey one-line" (click)="pressKey('5')">5</div>  
+                <div class="keys numkey one-line" (click)="pressKey('6')">6</div>
+                <div class="keys opkey one-line" (click)="pressKey('-')">-</div>  
+                <div class="keys numkey one-line" (click)="pressKey('1')">1</div>
+                <div class="keys numkey one-line" (click)="pressKey('2')">2</div>
+                <div class="keys numkey one-line" (click)="pressKey('3')">3</div>    
+                <div class="keys opkey one-line" (click)="pressKey('+')">+</div>
+                <div class="keys numkey zerokey one-line" (click)="pressKey('0')">0</div>  
+                <div class="keys numkey one-line" (click)="pressKey('.')">.</div>  
+                <div class="keys equalkey one-line" (click)="getAnswer()">=</div>  
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>

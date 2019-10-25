@@ -27,7 +27,9 @@
               "src/styles.css",
               "node_modules/@coreui/coreui/dist/css/coreui.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/canvasjs/dist/canvasjs.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/canvasjs/dist/canvasjs.min.js"
+            ]
           }
         },
         "lint": {

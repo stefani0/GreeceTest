@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultLayoutComponent } from './core/components/default-layout/default-layout.component';
+import { HomeComponent } from './core/components/home/home.component';
 
 
 const routes: Routes = [
@@ -10,20 +11,31 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
+    path: 'dashboard',
     component: DefaultLayoutComponent,
     data: {
       title: 'Dashboard'
     },
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    data: {
+      title: 'Home'
+    },
+  },
+  {
+    path: 'dashboard',
+    component: DefaultLayoutComponent,
+    data: {
+      title: 'HOME'
+    },
     children: [
       {
-        path: 'dashboard',
-        loadChildren: './modules/dashboard/dashboard.module#DashboardModule'
-      },
-      {
-        path: 'exam1`',
+        path: 'exam1',
         loadChildren: './modules/exam1/exam1.module#Exam1Module'
-      }
+      },     
+      
     ]
   },
 ];
