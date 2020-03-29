@@ -1,6 +1,5 @@
 import { Component, ViewChild, TemplateRef, OnInit, AfterViewInit, ChangeDetectorRef, ViewChildren, AfterViewChecked } from '@angular/core';
 import { FormlyFieldConfig, FieldArrayType } from '@ngx-formly/core';
-
 import { DatatableComponent, DataTableFooterComponent, DataTablePagerComponent, TableColumn } from '@swimlane/ngx-datatable';
 
 @Component({
@@ -16,13 +15,12 @@ export class DatatableFormComponent extends FieldArrayType implements OnInit, Af
 
   @ViewChild('defaultColumn', { static: true }) public defaultColumn: TemplateRef<any>;
 
-
   selected = [];
   row: any;
   countElements: number;
   totalMessage = 'Totale:';
   public data: Array<any>;
-
+ 
 
   constructor(private cdr: ChangeDetectorRef) {
     super();
@@ -41,6 +39,7 @@ export class DatatableFormComponent extends FieldArrayType implements OnInit, Af
       } else if (direction === 'down') {
         offset = Math.floor(offset);
       }
+
       if (direction !== undefined && !isNaN(offset)) {
         this.page.emit({ offset });
       }
@@ -54,7 +53,7 @@ export class DatatableFormComponent extends FieldArrayType implements OnInit, Af
     }
   }
 
-  controlForNotPaginated(): number {
+  controlForNotPaginated(): number { 
    if (this.countElements) {
      return this.countElements;
    }

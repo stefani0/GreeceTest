@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
+import { ListData } from '../../models/ListData';
+import { Result } from '../../models/Results';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,9 +15,9 @@ export class ExamService {
   }
 
 
-  getData(): Observable<any> {
-    return this.httpClient.get<any>(
-      'https://my-json-server.typicode.com/stefani0/GreeceTest/data/'
+  getData(): Observable<Result<ListData>> {
+    return this.httpClient.get<Result<ListData>>(
+      `${this.url}`
     )
   }
 

@@ -26,11 +26,12 @@
             "styles": [
               "node_modules/@coreui/coreui/dist/css/coreui.min.css",
               "node_modules/font-awesome/css/font-awesome.css",         
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/angular2-toaster/toaster.min.css",
               "node_modules/@swimlane/ngx-datatable/themes/bootstrap.css",
               "node_modules/@swimlane/ngx-datatable/assets/icons.css",
               "node_modules/@swimlane/ngx-datatable/index.css"
+            
             ],
             "scripts": [
             

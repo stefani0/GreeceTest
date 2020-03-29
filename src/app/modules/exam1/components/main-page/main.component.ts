@@ -4,6 +4,7 @@ import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 import { ExamService } from '../../services/examService/exam.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ListData } from '../../models/ListData';
+import { ToasterService } from 'angular2-toaster';
 
 @Component({
   selector: 'app-main',
@@ -26,12 +27,13 @@ export class MainComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private service: ExamService) {
+    private service: ExamService,
+    private toasterService: ToasterService) {
     this.getData();
   }
 
   ngOnInit() {
-   this.sub =  this.route.params.subscribe(params => {
+    this.sub = this.route.params.subscribe(params => {
       if (Object.keys(params).length === 0) {
       } else {
         if (params.pageVar == 'true') {
@@ -147,12 +149,15 @@ export class MainComponent implements OnInit, OnDestroy {
 
   getData() {
     this.service.getData().subscribe(
-      res => {
+      result => {
+       // console.log(result.success)
         this.modelTable = {
-          data: res
+          data: result
         };
         this.filterTable = this.modelTable;
-      }
+         this.toasterService.pop('success', 'Data loaded', '')     
+      },
+       error => this.toasterService.pop('error', 'error occured', '')
     )
   }
 
@@ -175,7 +180,9 @@ export class MainComponent implements OnInit, OnDestroy {
           data: this.filterTable.data.filter(data => data.id !== params.id)
         };
         this.filterTable = this.modelTable;
-      }
+        this.toasterService.pop('success', 'Data deleted', '')     
+      },
+      error => this.toasterService.pop('error', 'error occured', '')
     );
   }
 
@@ -189,8 +196,11 @@ export class MainComponent implements OnInit, OnDestroy {
     this.service.addPost(body).subscribe(
       (res) => {
         this.filterTable.data.push(res)
-        this.modelTable = { ...this.filterTable }
-      });
+        this.modelTable = { ...this.filterTable },
+        this.toasterService.pop('success', 'Data added', '')     
+      },
+      error => this.toasterService.pop('error', 'error occured', '')
+      );
   }
 
   editData(params) {
@@ -205,13 +215,10 @@ export class MainComponent implements OnInit, OnDestroy {
     this.service.updatePost(body).subscribe(
       (data) => {
         this.filterTable.data[params.id - 1] = data
-        this.modelTable = { ...this.filterTable }
-      }
+        this.modelTable = { ...this.filterTable },
+        this.toasterService.pop('success', 'Data edited', '')     
+      },
+      error => this.toasterService.pop('error', 'error occured', '')
     );
   }
-
-
-
-
-
 }

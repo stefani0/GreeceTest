@@ -30,12 +30,13 @@
         let-curPage="curPage"
         let-offset="offset"
         let-isVisible="isVisible">
-          <div class="page-count" *ngIf="to.mostraTotale">
-            <span *ngIf="selectedMessage">
+          <div class="page-count" >
+            <span >
               {{selectedCount.toLocaleString()}} {{selectedMessage}} / 
             </span>
-              {{totalMessage}} {{controlForNotPaginated()?.toLocaleString()}} 
+            {{table.rowCount.toLocaleString()}}  {{totalMessage}}
           </div>
+          
           <datatable-pager #pager
               [pagerLeftArrowIcon]="'datatable-icon-left'"
               [pagerRightArrowIcon]="'datatable-icon-right'"
