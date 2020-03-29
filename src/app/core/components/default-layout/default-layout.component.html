@@ -1,47 +1,16 @@
 <app-header [navbarBrandRouterLink]="['/dashboard']" [fixed]="true" [asideMenuToggler]=false
-  [mobileAsideMenuToggler]=false [sidebarToggler]="'lg'" [asideMenuToggler]="'lg'">
-
+  [mobileAsideMenuToggler]=false [sidebarToggler]="'lg'" >
 </app-header>
 
 <div class="app-body">
-  <app-sidebar [fixed]="true" [display]="'lg'">
-    <app-sidebar-nav [navItems]="navItems" (click)="changeUrl()"></app-sidebar-nav>
+  <app-sidebar [fixed]="true" [display]="'lg'" >
+    <app-sidebar-nav [navItems]="navItems" ></app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
   </app-sidebar>
-  <!-- Main content -->
+
   <main class="main">
-
-    <cui-breadcrumb>
-      <!-- Breadcrumb Menu Dahboard....>...>-->
-      <li class="breadcrumb-menu d-md-down-none">
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown"></div>
-      </li>
-    </cui-breadcrumb>
-
-
     <div class="container-fluid">
       <router-outlet></router-outlet>
-
-
-      <!-- <form [formGroup]="form">
-        <fieldset>
-          <legend>Login</legend>
-          <div class="form-field">
-            <label>Email:</label>
-            <input name="email" formControlName="email">
-          </div>
-          <div class="form-field">
-            <label>Password:</label>
-            <input name="password" formControlName="password" type="password">
-          </div>
-        </fieldset>
-        <div class="form-buttons">
-          <button class="button button-primary" (click)="login()">Login</button>
-        </div>
-      </form> -->
-
-    </div><!-- /.container-fluid -->
-
-
+    </div>
   </main>
 </div>

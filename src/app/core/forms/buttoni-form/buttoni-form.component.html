@@ -1,0 +1,14 @@
+<div *ngFor="let field of field.fieldGroup; let i = index;">
+    <formly-group [model]="model[i]" [field]="field" [options]="options" [form]="formControl">
+    </formly-group>
+</div>
+<div>
+<button class="btn btn-primary mx-1" tooltip="Modify" *ngIf="to.onlyUpdate"
+    (click)="update($event)" type="button">
+    <i class="fa fa-edit" aria-hidden="true"></i>
+</button>
+<button class="btn btn-primary mx-1" tooltip="Cancel" *ngIf="to.onlyDelete"
+    (click)="delete($event)" type="button">
+    <i class="fa fa-eraser" aria-hidden="true"></i>
+</button>
+</div>

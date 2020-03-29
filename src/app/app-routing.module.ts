@@ -1,28 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultLayoutComponent } from './core/components/default-layout/default-layout.component';
-import { HomeComponent } from './core/components/home/home.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { Error404Component } from './core/components/error404/error404.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: 'dashboard',
-    component: DefaultLayoutComponent,
+    path: 'login',
+    component: LoginComponent,
     data: {
-      title: 'Dashboard'
-    },
+      title: 'Login Page'
+    }
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: '404',
+    component: Error404Component,
     data: {
-      title: 'Home'
-    },
+      title: 'Page 404'
+    }
   },
   {
     path: 'dashboard',
@@ -33,11 +34,14 @@ const routes: Routes = [
     children: [
       {
         path: 'exam1',
-        loadChildren: './modules/exam1/exam1.module#Exam1Module'
-      },     
-      
+        // loadChildren: './modules/exam1/exam1.module#Exam1Module'
+        loadChildren: () => import('./modules/exam1/exam1.module').then(m => m.Exam1Module)
+
+      },
+
     ]
   },
+  { path: '**', component: Error404Component }
 ];
 
 @NgModule({

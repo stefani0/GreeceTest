@@ -1,0 +1,24 @@
+<div class="app-body">
+ 
+    <div class="container">
+      <div class="card-header">
+        <h1 *ngIf="!pageVar">Add New Data</h1>
+        <h1 *ngIf="pageVar">Edit Data</h1>
+      </div>
+      <div class="card p-4">
+        <div class="card-body">
+          <fieldset>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+              <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+            </form>
+            <button *ngIf="!pageVar" type="submit" class="btn btn-primary submit-button float-right"
+              (click)="onSubmit()">Add</button>
+            <button *ngIf="pageVar" type="submit" class="btn btn-primary submit-button float-right"
+              (click)="update()">Edit</button>
+          </fieldset>
+        </div>
+
+      </div>
+    </div>
+
+</div>

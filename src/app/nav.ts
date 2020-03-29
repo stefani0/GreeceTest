@@ -6,27 +6,21 @@ import { Injectable } from '@angular/core';
 export class NavItems {
   public navItems: NavData[];
 
-  private home = this.getComponents('Home', '/dashboard', 'icon-speedometer');
-
-  private f_sistemi = this.getComponents('Sistemi', 'close', 'icon-puzzle');
-  private exam1 = this.getComponents(
-    'Exam Number 1',
-    '/dashboard/exam1/test1',
-    'icon-puzzle'
-  );
-  private exam2 = this.getComponents(
-    'Exam Number 2',
-    '/dashboard/exam1/test2',
+  private home = this.getComponents('Web App', '/dashboard', 'icon-speedometer');
+  private f_sistemi = this.getComponents('Menu', 'close', 'icon-puzzle');
+  private main = this.getComponents(
+    'Main Page',
+    '/dashboard/exam1/main',
     'icon-puzzle'
   );
 
-  private exam3 = this.getComponents(
-    'Exam Number 3',
-    '/dashboard/exam1/test3',
+  private contact = this.getComponents(
+    'Contact',
+    '/dashboard/exam1/contact',
     'icon-puzzle'
   );
 
-  private sys = this.addChildren(this.f_sistemi, [this.exam1, this.exam2, this.exam3]);
+  private sys = this.addChildren(this.f_sistemi, [this.main, this.contact]);
 
   constructor() {
     this.navItems = [this.home];
@@ -49,9 +43,6 @@ export interface NavData {
   name?: string;
   url?: string;
   icon?: string;
-  title?: boolean;
   children?: NavData[];
-  variant?: string;
-  divider?: boolean;
-  class?: string;
+
 }

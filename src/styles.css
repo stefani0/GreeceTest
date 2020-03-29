@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+  .theme-green .bs-datepicker-head {
+    background-color: #20a8d8; }
+  
+  .theme-green .bs-datepicker-body table td span.selected,
+  .theme-green .bs-datepicker-body table td.selected span,
+  .theme-green .bs-datepicker-body table td span[class*="select-"]:after,
+  .theme-green .bs-datepicker-body table td[class*="select-"] span:after {
+    background-color: #20a8d8; }
+  
+  .theme-green .bs-datepicker-body table td.week span {
+    color: #20a8d8; }
+  
+  .theme-green .bs-datepicker-body table td.active-week span:hover {
+    cursor: pointer;
+    background-color: #20a8d8;
+    color: #fff;
+    opacity: 0.5;
+    transition: 0s; }
+  
+  .ngx-datatable.bootstrap .datatable-body .datatable-body-row .datatable-body-cell {
+    padding: 0.35rem 0.15rem !important; }
+  .ngx-datatable.bootstrap .datatable-body-row:hover, .ngx-datatable.material .datatable-body-row:hover {
+      background: #b5b5b5 !important;
+  }
+
+  .accordion > .card {
+    margin-bottom: 0px !important;
+  }
+  .nav-link > i {
+    margin-right: 37px;
+  }
+  .space {
+    margin-top: 40px;
+  }
+

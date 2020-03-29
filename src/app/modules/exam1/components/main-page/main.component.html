@@ -1,0 +1,24 @@
+<div class="animated fadeIn">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <label class="mx-auto"> Main Page</label>
+      </div>
+    </div>
+  </div>
+
+  <formly-form [model]="model" [fields]="fieldsTable" [options]="options" [form]="form">
+  </formly-form>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmitForm(data)" class="py-3">
+    <formly-form [model]="modelTable" [fields]="fieldsTable" [options]="options" [form]="form">
+    </formly-form>
+  </form>
+
+  <div class="row">
+    <div class="col-12">
+      <button (click)="goToNewDataForm()" class="btn btn-primary px-12 float-right">Add</button>
+    </div>
+  </div>
+</div>

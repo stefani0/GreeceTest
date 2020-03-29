@@ -1,0 +1,52 @@
+<ngx-datatable
+      #table
+      class="bootstrap"
+      
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      [rows]="model"
+      [columns]="to.columns"
+      [columnMode]="to.columnMode"
+      [rowHeight]="to.rowHeight"
+      [headerHeight]="to.headerHeight"
+      [footerHeight]="to.footerHeight"
+      [limit]="to.limit"
+      (sort)="onSort($event)"
+      [scrollbarH]="to.scrollbarH"
+      [reorderable]="to.reorderable"
+      [externalSorting]="true"
+      [selectionType]="'single'">
+
+    <ng-template #defaultColumn ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row" let-column="column">
+      <formly-field [field]="getField(field, column, rowIndex)"></formly-field>
+    </ng-template>    
+
+    <ngx-datatable-footer>
+      <ng-template  #footer
+        ngx-datatable-footer-template
+        let-rowCount="controlForNotPaginated()"
+        let-pageSize="pageSize"
+        let-selectedCount="selectedCount"
+        let-curPage="curPage"
+        let-offset="offset"
+        let-isVisible="isVisible">
+          <div class="page-count" *ngIf="to.mostraTotale">
+            <span *ngIf="selectedMessage">
+              {{selectedCount.toLocaleString()}} {{selectedMessage}} / 
+            </span>
+              {{totalMessage}} {{controlForNotPaginated()?.toLocaleString()}} 
+          </div>
+          <datatable-pager #pager
+              [pagerLeftArrowIcon]="'datatable-icon-left'"
+              [pagerRightArrowIcon]="'datatable-icon-right'"
+              [pagerPreviousIcon]="'datatable-icon-prev'"
+              [pagerNextIcon]="'datatable-icon-skip'"
+              [page]="curPage"
+              [size]="pageSize"
+              [count]=" controlForNotPaginated()"
+              [hidden]="!((controlForNotPaginated() / pageSize) > 1)"
+              (change)="onChangePage($event)">
+          </datatable-pager>
+      </ng-template>
+    </ngx-datatable-footer> 
+</ngx-datatable>

@@ -1,38 +1,44 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Exam1Component } from './components/exam1/exam1.component';
-import { Exam2Component } from './components/exam2/exam2.component';
-import { Exam3Component } from './components/exam3/exam3.component';
+import { ContactComponent } from './components/contact-page/contact.component';
+import { MainComponent } from './components/main-page/main.component';
+import { AddNewDataComponent } from './components/add-edit-data-page/add-edit-data.component';
 
 
 const routes: Routes = [
+
   {
     path: '',
     data: {
-        title: 'Exam 1 Test 1'
+      title: 'Exam 1'
     },
     children: [
-    {  
-      path: 'test1',
-      component : Exam1Component,
-      data: {
-        title: 'Exam 1'
+      {
+        path: '',
+        redirectTo: 'main',
+        pathMatch: 'full'
       },
-    },
-    {  
-      path: 'test2',
-      component : Exam2Component,
-      data: {
-        title: 'Exam 2'
+      {
+        path: 'main',
+        component: MainComponent,
+        data: {
+          title: 'Main Page'
+        },
       },
-    },
-    {  
-      path: 'test3',
-      component : Exam3Component,
-      data: {
-        title: 'Exam 3'
+      {
+        path: 'contact',
+        component: ContactComponent,
+        data: {
+          title: 'Contact Page'
+        },
       },
-    }
+      {
+        path: 'add',
+        component: AddNewDataComponent,
+        data: {
+          title: 'Main Page'
+        },
+      },
     ]
   }
 ];
