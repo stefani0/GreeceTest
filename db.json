@@ -1,12 +1,12 @@
 {
   "users": [
     {
-       "id" : 1;
-    "first_name": "string";
-    "last_name": "string";
-    "email": "number";
-    "ip_address": "string";
-    "pageVar" : true;
+       "id" : 1,
+    "first_name": "string",
+    "last_name": "string",
+    "email": "number",
+    "ip_address": "string",
+    "pageVar" : true
     }
   ],
   
