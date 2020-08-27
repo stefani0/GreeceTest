@@ -1,10 +1,11 @@
-
-
+{
+  "posts": [
     {
-    "id": "1",
-    "first_name": "f name 1",
-    "last_name": "dasd",
-    "email": "weqweq",
-    "ip_address": 32423,
-      "pageVar" : true
-    }  
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
