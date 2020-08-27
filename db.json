@@ -4,14 +4,10 @@
        "id" : 1,
     "first_name": "string",
     "last_name": "string",
-    "email": "number",
+    "email": 123,
     "ip_address": "string",
     "pageVar" : true
     }
   ],
-  
-  
-  "profile": {
-    "name": "typicode"
-  }
+
 }
