@@ -1,13 +1,25 @@
-{
-  "users": [
-    {
-       "id" : 1,
-    "first_name": "string",
-    "last_name": "string",
-    "email": 123,
-    "ip_address": "string",
-    "pageVar" : true
-    }
-  ]
 
-}
+export const customers = [{
+    'id': '1',
+    'Name': 'nje',
+    'Surname': 'Maria Anders',
+    'Email': 'stfeani@gmail',
+    'RoleId': 1,
+ 
+}, {
+    'id': '2',
+    'Name': 'dydos',
+    'Surname': 'Ana Trujillo',
+    'Email': 'a@gmail',
+    'RoleId': 2,
+  
+},
+{
+    'id': '3',
+    'Name': 'dydos',
+    'Surname': 'Ana Trujillo',
+    'Email': 'a@gmail',
+    'RoleId': 3,
+  
+},
+];
