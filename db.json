@@ -2,10 +2,24 @@
   "customers": [
     {
      "id": "1",
-    "Name": "Maria",
-    "Surname": " Anders",
+    "Name": "Stefani",
+    "Surname": " T",
     "Email": "stfeani@gmail",
     "RoleId": 1
+    },
+     {
+     "id": "2",
+    "Name": "Anna",
+    "Surname": " Stojkc",
+    "Email": "anna@gmail",
+    "RoleId": 2
+    },
+     {
+     "id": "3",
+    "Name": "Elis",
+    "Surname": "Henire",
+    "Email": "enis@gmail",
+    "RoleId": 3
     }
   ]
 }
