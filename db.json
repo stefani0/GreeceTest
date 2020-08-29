@@ -1,25 +1,13 @@
+
+
 {
-"customers" : [{
-    "id": "1",
-    "Name": "Maria",
-    "Surname": " Anders",
-    "Email": "stfeani@gmail",
-   "RoleId": 1,
- 
-}, {
-     "id": "2",
-    "Name": "Maria",
-    "Surname": " Anders",
-    "Email": "stfeani@gmail",
-   "RoleId": 2,
-  
-},
-{
-     "id": "3",
-    "Name": "Maria",
-    "Surname": " Anders",
-    "Email": "stfeani@gmail",
-   "RoleId": 3,
-  
+  "posts": [
+    {
+      "id": 1,
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
-              ]}
