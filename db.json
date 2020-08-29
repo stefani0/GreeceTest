@@ -1,25 +1,25 @@
 
 export const customers = [{
-    'id': '1',
-    'Name': 'nje',
-    'Surname': 'Maria Anders',
-    'Email': 'stfeani@gmail',
-    'RoleId': 1,
+    "id": "1",
+    "Name": "Maria",
+    "Surname": " Anders",
+    "Email": "stfeani@gmail",
+   "RoleId": 1,
  
 }, {
-    'id': '2',
-    'Name': 'dydos',
-    'Surname': 'Ana Trujillo',
-    'Email': 'a@gmail',
-    'RoleId': 2,
+     "id": "2",
+    "Name": "Maria",
+    "Surname": " Anders",
+    "Email": "stfeani@gmail",
+   "RoleId": 2,
   
 },
 {
-    'id': '3',
-    'Name': 'dydos',
-    'Surname': 'Ana Trujillo',
-    'Email': 'a@gmail',
-    'RoleId': 3,
+     "id": "3",
+    "Name": "Maria",
+    "Surname": " Anders",
+    "Email": "stfeani@gmail",
+   "RoleId": 3,
   
 },
 ];
