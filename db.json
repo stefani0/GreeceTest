@@ -1,13 +1,15 @@
 
 
 {
-  "posts": [
+  "customers": [
     {
-      "id": 1,
-      "title": "hello"
+     "id": "1",
+    "Name": "Maria",
+    "Surname": " Anders",
+    "Email": "stfeani@gmail",
+    "RoleId": 1,
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+
 }
+
