@@ -1,5 +1,5 @@
 
-export const customers = [{
+customers = [{
     "id": "1",
     "Name": "Maria",
     "Surname": " Anders",
