@@ -1,5 +1,5 @@
-
-customers = [{
+{
+"customers" : [{
     "id": "1",
     "Name": "Maria",
     "Surname": " Anders",
@@ -23,3 +23,4 @@ customers = [{
   
 },
 ];
+}
